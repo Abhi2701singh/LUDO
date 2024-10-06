@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ludo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        .outer {
+            height: 1500px;
+            width: 1500px;
+            border: 4px solid black;
+            box-sizing: border-box;
+        }
+        
+        .outer1 {
+            height: 600px;
+            width: 1500px;
+            border: 4px solid black;
+            box-sizing: border-box;
+            display: flex;
+        }
+        
+        .outer2 {
+            height: 300px;
+            width: 1500px;
+            border: 4px solid black;
+            box-sizing: border-box;
+            display: flex;
+        }
+        
+        .outer3 {
+            height: 600px;
+            width: 1500px;
+            border: 4px solid black;
+            box-sizing: border-box;
+            display: flex;
+        }
+        
+        .outer11 {
+            height: 600px;
+            width: 600px;
+            border: 4px solid black;
+            float: left;
+            background-color: red;
+        }
+        
+        .outer12 {
+            height: 600px;
+            width: 300px;
+            border: 4px solid black;
+            float: left;
+            display: flex;
+            background-color: white;
+        }
+        
+        .outer13 {
+            height: 600px;
+            width: 600px;
+            border: 4px solid black;
+            float: left;
+            background-color: green;
+        }
+        
+        .outer21 {
+            height: 300px;
+            width: 600px;
+            border: 4px solid black;
+            float: left;
+            background-color: white;
+            box-sizing: border-box;
+        }
+        
+        .outer22 {
+            height: 300px;
+            width: 300px;
+            border: 4px solid black;
+            float: left;
+            background-color: hsla(88, 100%, 50%, 0.857);
+            box-sizing: border-box;
+        }
+        
+        .outer23 {
+            height: 300px;
+            width: 600px;
+            border: 4px solid black;
+            float: left;
+            background-color: white;
+            box-sizing: border-box;
+        }
+        
+        .outer31 {
+            height: 600px;
+            width: 600px;
+            border: 4px solid black;
+            float: left;
+            background-color: yellow;
+            box-sizing: border-box;
+        }
+        
+        .outer32 {
+            height: 600px;
+            width: 300px;
+            border: 4px solid black;
+            float: left;
+            background-color: white;
+            box-sizing: border-box;
+            display: flex;
+        }
+        
+        .outer33 {
+            height: 600px;
+            width: 600px;
+            border: 4px solid black;
+            float: left;
+            background-color: blue;
+            box-sizing: border-box;
+        }
+        
+        .outer121 {
+            height: 600px;
+            width: 100px;
+            float: left;
+        }
+        
+        .outer122 {
+            height: 600px;
+            width: 100px;
+            float: left;
+        }
+        
+        .outer123 {
+            height: 600px;
+            width: 100px;
+            float: left;
+        }
+        
+        .outer1211 {
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            border-radius: 50%;
+        }
+        
+        .outer1212 {
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            border-radius: 50%;
+            background-color: green;
+        }
+        
+        .outer1213 {
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            border-radius: 50%;
+        }
+        
+        .outer211 {
+            height: 100px;
+            width: 600px;
+            box-sizing: border-box;
+        }
+        
+        .outer212 {
+            height: 100px;
+            width: 600px;
+            box-sizing: border-box;
+        }
+        
+        .outer213 {
+            height: 100px;
+            width: 600px;
+            box-sizing: border-box;
+        }
+        
+        .outer2111 {
+            height: 100px;
+            width: 100px;
+            border: 4px solid black;
+            float: left;
+            border-radius: 50%;
+        }
+        
+        .outer2112 {
+            height: 100px;
+            width: 100px;
+            border: 4px solid black;
+            float: left;
+            border-radius: 50%;
+            background-color: red;
+        }
+        
+        .outer2113 {
+            height: 100px;
+            width: 100px;
+            border: 4px solid black;
+            float: left;
+            border-radius: 50%;
+        }
+        
+        .outer2311 {
+            height: 100px;
+            width: 100px;
+            float: left;
+            border: 4px solid black;
+            border-radius: 50%;
+        }
+        
+        .outer2312 {
+            height: 100px;
+            width: 100px;
+            border: 4px solid black;
+            float: left;
+            border-radius: 50%;
+            background-color: rgb(51, 0, 255);
+        }
+        
+        .outer2313 {
+            height: 100px;
+            width: 100px;
+            float: left;
+            border: 4px solid black;
+            border-radius: 50%;
+        }
+        
+        .outer321 {
+            height: 600px;
+            width: 100px;
+            float: left;
+        }
+        
+        .outer322 {
+            height: 600px;
+            width: 100px;
+            float: left;
+        }
+        
+        .outer323 {
+            height: 600px;
+            width: 100px;
+            float: left;
+        }
+        
+        .outer3211 {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            border: 2px solid black;
+        }
+        
+        .outer3221 {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            background-color: yellow;
+            border: 2px solid black;
+        }
+        
+        .outer3231 {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            border: 2px solid black;
+        }
+        
+        .home {
+            font-size: 80px;
+            margin-top: 100px;
+            margin-left: 20px;
+        }
+        
+        #blank {
+            background-color: white;
+        }
+        
+        #red {
+            background-color: red;
+        }
+        
+        i {
+            font-size: 70px;
+            margin-left: 10px;
+            margin-top: 10px;
+            color: black;
+        }
+        
+        #yellow {
+            background-color: yellow;
+        }
+        
+        #blue {
+            background-color: blue;
+        }
+        
+        #green {
+            background-color: green;
+        }
+        
+        .circle {
+            border: 9px solid black;
+            height: 500px;
+            width: 500px;
+            border-radius: 50%;
+            margin-top: 50px;
+            margin-left: 40px;
+            box-sizing: border-box;
+            background-color: azure;
+        }
+        
+        .circle1 {
+            height: 150px;
+            width: 150px;
+            border: 2px solid black;
+            float: left;
+            border-radius: 50%;
+            margin-top: 60px;
+            margin-left: 60px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+
+        <div class="outer1">
+            <div class="outer11">
+                <div class="circle">
+                    <div class="circle1" id="red"></div>
+                    <div class="circle1" id="red"></div>
+                    <div class="circle1" id="red"></div>
+                    <div class="circle1" id="red"></div>
+                </div>
+            </div>
+            <div class="outer12">
+                <div class="outer121">
+                    <div class="outer1211"></div>
+                    <div class="outer1211"></div>
+                    <div class="outer1211"><i class="fa-solid fa-star"></i></div>
+                    <div class="outer1211"></div>
+                    <div class="outer1211"></div>
+                    <div class="outer1211"></div>
+                </div>
+                <div class="outer122">
+                    <div class="outer1212" id="blank"></div>
+                    <div class="outer1212"></div>
+                    <div class="outer1212"></div>
+                    <div class="outer1212"></div>
+                    <div class="outer1212"></div>
+                    <div class="outer1212"></div>
+                </div>
+
+                <div class="outer123">
+                    <div class="outer1213"></div>
+                    <div class="outer1213" id="green"><i class="fa-solid fa-star"></i></div>
+                    <div class="outer1213"></div>
+                    <div class="outer1213"></div>
+                    <div class="outer1213"></div>
+                    <div class="outer1213"></div>
+                </div>
+            </div>
+            <div class="outer13">
+                <div class="circle">
+                    <div class="circle1" id="green"></div>
+                    <div class="circle1" id="green"></div>
+                    <div class="circle1" id="green"></div>
+                    <div class="circle1" id="green"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="outer2">
+            <div class="outer21">
+                <div class="outer211">
+                    <div class="outer2111"></div>
+                    <div class="outer2111" id="red"><i class="fa-solid fa-star"></i></div>
+                    <div class="outer2111"></div>
+                    <div class="outer2111"></div>
+                    <div class="outer2111"></div>
+                    <div class="outer2111"></div>
+                </div>
+                <div class="outer212">
+                    <div class="outer2112" id="blank"></div>
+                    <div class="outer2112"></div>
+                    <div class="outer2112"></div>
+                    <div class="outer2112"></div>
+                    <div class="outer2112"></div>
+                    <div class="outer2112"></div>
+                </div>
+                <div class="outer213">
+                    <div class="outer2113"></div>
+                    <div class="outer2113"></div>
+                    <div class="outer2113"><i class="fa-solid fa-star"></i></div>
+                    <div class="outer2113"></div>
+                    <div class="outer2113"></div>
+                    <div class="outer2113"></div>
+                </div>
+            </div>
+            <div class="outer22">
+                <p class="home">
+                    <b>HOME</b></p>
+            </div>
+            <div class="outer23">
+
+                <div class="outer211">
+                    <div class="outer2311"></div>
+                    <div class="outer2311"></div>
+                    <div class="outer2311"></div>
+                    <div class="outer2311"><i class="fa-solid fa-star"></i></div>
+                    <div class="outer2311"></div>
+                    <div class="outer2311"></div>
+                </div>
+                <div class="outer212">
+                    <div class="outer2312"></div>
+                    <div class="outer2312"></div>
+                    <div class="outer2312"></div>
+                    <div class="outer2312"></div>
+                    <div class="outer2312"></div>
+                    <div class="outer2312" id="blank"></div>
+                </div>
+                <div class="outer213">
+                    <div class="outer2313"></div>
+                    <div class="outer2313"></div>
+                    <div class="outer2313"></div>
+                    <div class="outer2313"></div>
+                    <div class="outer2313" id="blue"><i class=" fa-solid fa-star "></i></div>
+                    <div class="outer2313"></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="outer3">
+            <div class="outer31">
+                <div class="circle">
+                    <div class="circle1" id="yellow"></div>
+                    <div class="circle1" id="yellow"></div>
+                    <div class="circle1" id="yellow"></div>
+                    <div class="circle1" id="yellow"></div>
+                </div>
+            </div>
+            <div class="outer32">
+                <div class="outer321">
+                    <div class="outer3211"></div>
+                    <div class="outer3211"></div>
+                    <div class="outer3211"></div>
+                    <div class="outer3211"></div>
+                    <div class="outer3211" id="yellow"><i class=" fa-solid fa-star "></i></div>
+                    <div class="outer3211 "></div>
+                </div>
+                <div class="outer322 ">
+                    <div class="outer3221 "></div>
+                    <div class="outer3221 "></div>
+                    <div class="outer3221 "></div>
+                    <div class="outer3221 "></div>
+                    <div class="outer3221 "></div>
+                    <div class="outer3221 " id="blank"></div>
+                </div>
+                <div class="outer323 ">
+                    <div class="outer3231 "></div>
+                    <div class="outer3231 "></div>
+                    <div class="outer3231 "></div>
+                    <div class="outer3231 "><i class="fa-solid fa-star"></i></div>
+                    <div class="outer3231 "></div>
+                    <div class="outer3231 "></div>
+                </div>
+
+            </div>
+            <div class="outer33 ">
+                <div class="circle">
+                    <div class="circle1"></div>
+                    <div class="circle1"></div>
+                    <div class="circle1"></div>
+                    <div class="circle1"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
